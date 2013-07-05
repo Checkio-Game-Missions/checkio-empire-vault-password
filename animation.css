@@ -56,32 +56,240 @@
     border-color: #de0202;
 }
 
-.tryit-content {
-    background-color: #dfe8f7;
-    font-family: verdana;
-}
-
-.tryit-content .tool td{
-    text-align: center;
-    vertical-align: top;
-}
-
-/*it for firefox*/
-.tryit-content .tool tr:first-child td:last-child {
-    height: 20%;
-}
-
-.tryit-content .checkio-result{
-    font-size: 16px;
-    text-align: center;
-    color: #294270;
-    width: 160px;
-}
-
-.tryit-content .btn {
-
-}
 
 
 /* Your CSS */
 /*          */
+.animation-content h1 {
+    color: black;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.animation-content h2 {
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+.animation-content .error{
+    color: #de0202;
+    border-color: #de0202;
+}
+
+.animation-content .explanation{
+    font-weight: bold;
+    color: #294270;
+    text-align: center;
+
+}
+
+.animation-content .password-word span{
+
+    border-bottom: solid 2px #294270;
+}
+
+.animation-content .explanation .password-word{
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.animation-content .explanation .password-length {
+    padding: 5px;;
+}
+
+.animation-content .lowercase{
+    color: #F0801A;
+}
+
+.animation-content .uppercase{
+    color: #294270;
+}
+
+.animation-content .digital{
+    color: #737370;
+}
+
+.center-exp {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+.animation-content  .vote_up{
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('http://www.checkio.org/static/contrib/jquery_vote_panel/img/like_states_16.png') no-repeat 0 0px;
+}
+
+.animation-content  .vote_down{
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('http://www.checkio.org/static/contrib/jquery_vote_panel/img/dislike_states_16.png') no-repeat 0 0px;
+}
+
+
+.tryit-content{
+    background-color: #d4d4d4;
+
+}
+
+.tryit-content .tool{
+    margin-top: 10px;
+}
+
+.tryit-content .tool .password{
+    padding-top: 5px;
+    width: 143px;
+    height: 63px;
+    color: #294270;
+    font-weight: bold;
+    /*float: left;*/
+    display: inline;
+}
+
+
+
+.tryit-content .tool .password label.password_label{
+    /*float: left;*/
+    display: inline-block;
+    border: none;
+    height: 20px;
+    font-size: 15px;
+}
+
+
+.tryit-content .tool .password input.password_input{
+    /*float: left;*/
+    font-family: verdana;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 150px;
+    height: 25px;
+    font-size: 15px;
+}
+
+.tryit-content .tool .password .bn_check{
+    /*float: left;*/
+    cursor: pointer;
+    display: inline-block;
+}
+
+.tryit-content .checkio_result{
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: #294270;
+}
+
+.tryit-content .tool .password table td{
+    vertical-align: middle;
+}
+
+.tryit-content .uneditable-input {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+.tryit-content .uneditable-input:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+.tryit-content .btn {
+    color: #294270;
+    font-weight: bold;
+    display: inline-block;
+    *display: inline;
+    padding: 4px 14px;
+    margin-bottom: 0;
+    *margin-left: .3em;
+    font-size: 14px;
+    line-height: 20px;
+    *line-height: 20px;
+    color: #333333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    *background-color: #e6e6e6;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #bbbbbb;
+    *border: 0;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-bottom-color: #a2a2a2;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    *zoom: 1;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.tryit-content .btn:hover,
+.tryit-content .btn:active,
+{
+    color: #333333;
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9;
+}
+
+/*.btn:active {*/
+/*background-color: #cccccc \9;*/
+/*}*/
+
+.tryit-content .btn:hover {
+    color: #333333;
+    text-decoration: none;
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9;
+    /* Buttons in IE7 don't get borders, so darken on hover */
+
+    background-position: 0 -15px;
+    -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
+    -o-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear;
+}
+
+.tryit-content .btn:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.tryit-content .btn:active {
+    background-color: #e6e6e6;
+    background-color: #d9d9d9 \9;
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}

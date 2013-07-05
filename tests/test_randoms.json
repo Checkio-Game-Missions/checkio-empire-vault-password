@@ -4,8 +4,88 @@
     },
     "tests":[
         {
-            "input": "???",
-            "answer": "???"
+            "input":"vcugdgywnl",
+            "answer":false
+        },
+        {
+            "input":"ewarrqepd",
+            "answer":false
+        },
+        {
+            "input":"HCRGBGGTZN",
+            "answer":false
+        },
+        {
+            "input":"QEKRZBPUG",
+            "answer":false
+        },
+        {
+            "input":"ZFLTIYYNII",
+            "answer":false
+        },
+        {
+            "input":"853389615",
+            "answer":false
+        },
+        {
+            "input":"9995232403",
+            "answer":false
+        },
+        {
+            "input":"ZcBpnUQDmp",
+            "answer":false
+        },
+        {
+            "input":"FoIazSTIx",
+            "answer":false
+        },
+        {
+            "input":"6k9uvl3anj",
+            "answer":false
+        },
+        {
+            "input":"p7ymoqxr8",
+            "answer":false
+        },
+        {
+            "input":"VYWLPZ83UO",
+            "answer":false
+        },
+        {
+            "input":"YKTXZSPFW",
+            "answer":false
+        },
+        {
+            "input":"WpJTGJlOgZ",
+            "answer":false
+        },
+        {
+            "input":"2fpLeYOTQ",
+            "answer":false
+        },
+        {
+            "input":"qB8TDwXpDp",
+            "answer":true
+        },
+        {
+            "input":"G9KI7NmpH",
+            "answer":false
+        },
+        {
+            "input":"iwUTNtwC16l0Xl2OzLH",
+            "answer":true
+        },
+        {
+            "input":"7T3x2rs3YlgAVsK3Pb0",
+            "answer":true
+        },
+        {
+            "input":"5liOlYOsKbnViZIMBWr",
+            "answer":true
+        },
+        {
+            "input":"K5uzwrFESgmat6X2VYw",
+            "answer":true
         }
     ]
 }

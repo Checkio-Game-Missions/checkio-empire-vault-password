@@ -1,9 +1,25 @@
 <script type="text/template" id="template_animation">
     <div class="animation-content center-exp">
         <div class="output"></div>
-        <div class="explanation center-exp"></div>
+        <div class="explanation">
+            <div class="password-word"></div>
+            <div class="password-length"></div>
+            <div class="password-include">
+                <table class="center-exp">
+                    <tr>
+                        <td>[a-z]: </td>
+                        <td><span class="lower-include"></span></td>
+                        <td>[A-Z]:</td>
+                        <td><span class="upper-include"></span></td>
+                        <td>[0-9]:</td>
+                        <td><span class="digital-include"></span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
         <div class="answer"></div>
         <div class="call"></div>
+        <div style="clear:both"></div>
     </div>
 </script>
 

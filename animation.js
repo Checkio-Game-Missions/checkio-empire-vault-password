@@ -70,12 +70,60 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             //Dont change the code before it
 
             //Your code here about test explanation animation
-            //$content.find(".explanation").html("Something text for example");
-            //
-            //
-            //
-            //
-            //
+            var flag_l = false;
+            var flag_u = false;
+            var flag_d = false;
+            var password_word_html = function(){
+                var res = '';
+                for (var i = 0; i < checkioInput.length; i++){
+                    if (checkioInput[i].match('[a-z]')){
+                        res += "<span class='lowercase'>";
+                        flag_l = true;
+                    }
+                    else if (checkioInput[i].match('[A-Z]')){
+                        res += "<span class='uppercase'>";
+                        flag_u = true;
+                    }
+                    else if (checkioInput[i].match('[0-9]')){
+                        res += "<span class='digital'>";
+                        flag_d = true;
+                    }
+                    else
+                        res += "<span>" + checkioInput[i] + "</span> ";
+                    res +=  checkioInput[i] + "</span> ";
+                }
+                if (i < 9)
+                    for (i; i < 9; i++)
+                        res += "<span>&nbsp;</span> ";
+                return res;
+            }();
+            var password_length_html = function(){
+                var res = 'length ';
+                if (checkioInput.length < 10)
+                    res += "< 10";
+                else
+                    res += " >= 10"
+                return res;
+
+            }();
+
+            var password_include = function() {
+                if (flag_l)
+                    $content.find('.lower-include').addClass('vote_up');
+                else
+                    $content.find('.lower-include').addClass('vote_down');
+                if (flag_u)
+                    $content.find('.upper-include').addClass('vote_up');
+                else
+                    $content.find('.upper-include').addClass('vote_down');
+                if (flag_d)
+                    $content.find('.digital-include').addClass('vote_up');
+                else
+                    $content.find('.digital-include').addClass('vote_down');
+            }();
+
+            $content.find('.password-length').html(password_length_html);
+            $content.find('.password-word').html(password_word_html);
 
 
             this_e.setAnimationHeight($content.height() + 60);

@@ -1,22 +1,108 @@
 {
-    "options":{
-        "rand_tests_quantity": 0
-    },
     "tests":[
         {
-            "input": [1, 2, 3],
-            "answer": 5,
-            "explanation": "???"
+            "input":"ULFFunH8ni",
+            "answer":true
         },
         {
-            "input": [[1], [2, 3]],
-            "answer": 3.23232,
-            "explanation": "???"
+            "input":"PC58hvXRg6",
+            "answer":true
         },
         {
-            "input": 4.555,
-            "answer": "dsdsds",
-            "explanation": "???"
+            "input":"ZbFFzkJIZe",
+            "answer":false
+        },
+        {
+            "input":"aaaaaaaaaaaaaaaaaaaaa",
+            "answer":false
+        },
+        {
+            "input":"aA1",
+            "answer":false
+        },
+        {
+            "input":"tnvpxiwntp",
+            "answer":false
+        },
+        {
+            "input":"awzbdzkfz",
+            "answer":false
+        },
+        {
+            "input":"TEPIJCFLYW",
+            "answer":false
+        },
+        {
+            "input":"OLWLDCWJZ",
+            "answer":false
+        },
+        {
+            "input":"RCAGOSHTTS",
+            "answer":false
+        },
+        {
+            "input":"303559509",
+            "answer":false
+        },
+        {
+            "input":"6691219721",
+            "answer":false
+        },
+        {
+            "input":"RRRQdoiHAA",
+            "answer":false
+        },
+        {
+            "input":"PVlppfwrT",
+            "answer":false
+        },
+        {
+            "input":"2k4ag8csx8",
+            "answer":false
+        },
+        {
+            "input":"45ae5lkgz",
+            "answer":false
+        },
+        {
+            "input":"JVBDZXOAQ7",
+            "answer":false
+        },
+        {
+            "input":"M39J8L1W0",
+            "answer":false
+        },
+        {
+            "input":"1cmuPF1Ycz",
+            "answer":true
+        },
+        {
+            "input":"aqMpAEus2",
+            "answer":false
+        },
+        {
+            "input":"LwPrMxXiKq",
+            "answer":false
+        },
+        {
+            "input":"Pv4HdnUNb",
+            "answer":false
+        },
+        {
+            "input":"jRNfXg6CdM15SLChALq",
+            "answer":true
+        },
+        {
+            "input":"HZeLrcRR3NU5KprAybp",
+            "answer":true
+        },
+        {
+            "input":"Y5WO7EF3YLCO2ch1KgU",
+            "answer":true
+        },
+        {
+            "input":"geF6MuGsHozGCmjeUxF",
+            "answer":true
         }
     ]
 }

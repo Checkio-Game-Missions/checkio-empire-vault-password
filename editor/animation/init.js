@@ -8,7 +8,11 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
         });
 
         ext.set_process_in(function (this_e, data) {
-            cur_slide[data[1]] = data[0];
+            cur_slide["in"] = data[0];
+        });
+
+        ext.set_process_out(function (this_e, data) {
+            cur_slide["out"] = data[0];
         });
 
         ext.set_process_ext(function (this_e, data) {
@@ -25,7 +29,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
         ext.set_animate_success_slide(function (this_e, options) {
             var $h = $(this_e.setHtmlSlide('<div class="animation-success"><div></div></div>'));
-            this_e.setAnimationHeight(112);
+            this_e.setAnimationHeight(115);
         });
 
         ext.set_animate_slide(function (this_e, data, options) {
@@ -35,7 +39,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 return false;
             }
             if (data.error) {
-                $content.find('.call').html('Fail: checkio(' + ext.JSON.encode(data.referee) + ')');
+                $content.find('.call').html('Fail: checkio(' + ext.JSON.encode(data.in) + ')');
                 $content.find('.output').html(data.error.replace(/\n/g, ","));
 
                 $content.find('.output').addClass('error');
@@ -46,10 +50,12 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 return false;
             }
 
-            var checkioInput = data.ext["input"];
+            var checkioInput = data.in;
             var rightResult = data.ext["answer"];
-            var userResult = data.req;
+            var userResult = data.out;
             var result = data.ext["result"];
+            var result_addon = data.ext["result_addon"];
+
 
             //if you need additional info from tests (if exists)
             var explanation = data.ext["explanation"];
@@ -69,7 +75,6 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             }
             //Dont change the code before it
 
-            //Your code here about test explanation animation
             var flag_l = false;
             var flag_u = false;
             var flag_d = false;
@@ -130,11 +135,9 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
         });
 
-        //TRYIT code
+
         var $tryit;
 
-
-        //this function process returned data and show it
         ext.set_console_process_ret(function (this_e, ret) {
             try {
                 ret = JSON.parse(ret);
@@ -165,8 +168,24 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             });
 
         });
+       
 
+        var colorOrange4 = "#F0801A";
+        var colorOrange3 = "#FA8F00";
+        var colorOrange2 = "#FAA600";
+        var colorOrange1 = "#FABA00";
 
+        var colorBlue4 = "#294270";
+        var colorBlue3 = "#006CA9";
+        var colorBlue2 = "#65A1CF";
+        var colorBlue1 = "#8FC7ED";
+
+        var colorGrey4 = "#737370";
+        var colorGrey3 = "#D9E9E";
+        var colorGrey2 = "#C5C6C6";
+        var colorGrey1 = "#EBEDED";
+
+        var colorWhite = "#FFFFFF";
         //Your Additional functions or objects inside scope
         //
         //

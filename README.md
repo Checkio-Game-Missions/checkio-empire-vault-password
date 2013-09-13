@@ -1,4 +1,4 @@
-checkio-task-template
+checkio-task-house-password
 =====================
 
 Checkio task "House password"

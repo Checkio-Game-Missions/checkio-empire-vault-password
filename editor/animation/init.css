@@ -49,6 +49,7 @@
     text-align: center;
     letter-spacing: 0.7px;
     word-break: break-word;
+    white-space: pre-wrap;
 }
 
 .animation-content .error{
@@ -132,7 +133,7 @@
 
 
 /*.tryit-content{*/
-    /*background-color: #d4d4d4;*/
+/*background-color: #d4d4d4;*/
 
 /*}*/
 

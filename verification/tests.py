@@ -15,14 +15,6 @@ TESTS = {
             "answer":True
         },
         {
-            "input":"PC58hvXRg6",
-            "answer":True
-        },
-        {
-            "input":"ZbFFzkJIZe",
-            "answer":False
-        },
-        {
             "input":"aaaaaaaaaaaaaaaaaaaaa",
             "answer":False
         },
@@ -31,19 +23,7 @@ TESTS = {
             "answer":False
         },
         {
-            "input":"tnvpxiwntp",
-            "answer":False
-        },
-        {
             "input":"awzbdzkfz",
-            "answer":False
-        },
-        {
-            "input":"TEPIJCFLYW",
-            "answer":False
-        },
-        {
-            "input":"OLWLDCWJZ",
             "answer":False
         },
         {
@@ -51,15 +31,7 @@ TESTS = {
             "answer":False
         },
         {
-            "input":"303559509",
-            "answer":False
-        },
-        {
             "input":"6691219721",
-            "answer":False
-        },
-        {
-            "input":"RRRQdoiHAA",
             "answer":False
         },
         {
@@ -67,32 +39,12 @@ TESTS = {
             "answer":False
         },
         {
-            "input":"2k4ag8csx8",
-            "answer":False
-        },
-        {
             "input":"45ae5lkgz",
-            "answer":False
-        },
-        {
-            "input":"JVBDZXOAQ7",
-            "answer":False
-        },
-        {
-            "input":"M39J8L1W0",
             "answer":False
         },
         {
             "input":"1cmuPF1Ycz",
             "answer":True
-        },
-        {
-            "input":"aqMpAEus2",
-            "answer":False
-        },
-        {
-            "input":"LwPrMxXiKq",
-            "answer":False
         },
         {
             "input":"Pv4HdnUNb",
@@ -106,14 +58,6 @@ TESTS = {
             "input":"HZeLrcRR3NU5KprAybp",
             "answer":True
         },
-        {
-            "input":"Y5WO7EF3YLCO2ch1KgU",
-            "answer":True
-        },
-        {
-            "input":"geF6MuGsHozGCmjeUxF",
-            "answer":True
-        }
     ],
     "Extra": [
         {
@@ -121,23 +65,7 @@ TESTS = {
             "answer":False
         },
         {
-            "input":"ewarrqepd",
-            "answer":False
-        },
-        {
-            "input":"HCRGBGGTZN",
-            "answer":False
-        },
-        {
-            "input":"QEKRZBPUG",
-            "answer":False
-        },
-        {
             "input":"ZFLTIYYNII",
-            "answer":False
-        },
-        {
-            "input":"853389615",
             "answer":False
         },
         {
@@ -145,55 +73,11 @@ TESTS = {
             "answer":False
         },
         {
-            "input":"ZcBpnUQDmp",
-            "answer":False
-        },
-        {
-            "input":"FoIazSTIx",
-            "answer":False
-        },
-        {
-            "input":"6k9uvl3anj",
-            "answer":False
-        },
-        {
             "input":"p7ymoqxr8",
             "answer":False
         },
         {
-            "input":"VYWLPZ83UO",
-            "answer":False
-        },
-        {
-            "input":"YKTXZSPFW",
-            "answer":False
-        },
-        {
-            "input":"WpJTGJlOgZ",
-            "answer":False
-        },
-        {
-            "input":"2fpLeYOTQ",
-            "answer":False
-        },
-        {
             "input":"qB8TDwXpDp",
-            "answer":True
-        },
-        {
-            "input":"G9KI7NmpH",
-            "answer":False
-        },
-        {
-            "input":"iwUTNtwC16l0Xl2OzLH",
-            "answer":True
-        },
-        {
-            "input":"7T3x2rs3YlgAVsK3Pb0",
-            "answer":True
-        },
-        {
-            "input":"5liOlYOsKbnViZIMBWr",
             "answer":True
         },
         {

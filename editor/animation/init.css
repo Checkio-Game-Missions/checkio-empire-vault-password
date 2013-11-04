@@ -118,14 +118,6 @@
 }
 
 
-
-.animation-content  .vote{
-    display: block;
-    width: 16px;
-    height: 16px;
-}
-
-
 .animation-content span.vote_up{
     color: green;
 }
@@ -143,6 +135,9 @@
     text-align: center;
     vertical-align: top;
     padding: 3px;
+    font-size: 16px;
+    color: #294270;
+    font-family: Verdana, Arial, sans-serif;
 }
 
 /*it for firefox*/
@@ -154,7 +149,6 @@
     font-size: 16px;
     text-align: center;
     color: #294270;
-    width: 160px;
 }
 
 .tryit-content .btn {
@@ -234,3 +228,12 @@ fieldset[disabled] .btn {
     cursor: not-allowed;
     background-color: #eeeeee;
 }
+
+.tryit-content .tryit-feedback .vote {
+    color: red;
+}
+
+.tryit-content .tryit-feedback span.vote-up {
+    color: green;
+}
+

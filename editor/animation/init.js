@@ -90,24 +90,18 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             }
             catch (err) {
             }
-            if (ret == true) {
-                $tryit.find('.checkio_result').html("Good password (True)");
-            }
-            else if (ret == false) {
-                $tryit.find('.checkio_result').html("Bad password (False)");
-            }
-            else {
-                $tryit.find('.checkio_result').html("Checkio return " + JSON.stringify(ret));
-            }
+            $tryit.find('.checkio_result').html("Your result:<br>" + ret);
+
         });
 
         ext.set_generate_animation_panel(function (this_e) {
             $tryit = $(this_e.setHtmlTryIt(ext.get_template('tryit'))).find(".tryit-content");
-            $tryit.find('.password_input').focus();
+            var tDiv = new HousePasswordDiv($tryit.find(".tool"));
+            tDiv.createFeedback();
 
 
-            $tryit.find('form').submit(function (e) {
-                var password = $tryit.find('.password_input').val();
+            $tryit.find('.bn-check').click(function (e) {
+                var password = tDiv.getPassword();
                 this_e.sendToConsoleCheckiO(password);
                 e.stopPropagation();
                 return false;
@@ -167,7 +161,49 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
                 root.find('.password-length').html(password_length_html);
                 root.find('.password-word').html(password_word_html);
+            };
+
+            var passwordInput;
+
+            this.createFeedback = function () {
+                passwordInput = root.find('.password_input');
+                passwordInput.focus();
+                var lowerSpan = root.find(".lower-include");
+                var upperSpan = root.find(".upper-include");
+                var digitalSpan = root.find(".digital-include");
+                var lengthSpan = root.find(".length");
+
+                var voteChange = function(pass, span, pattern) {
+                    if (pass.match(pattern)) {
+                        if (!span.hasClass("vote-up")) {
+                            span.addClass("vote-up");
+                            span.html(vMark);
+                        }
+                    }
+                    else {
+                        span.removeClass("vote-up");
+                        span.html(xMark);
+                    }
+                };
+
+                var checkPassword = function () {
+                    var pass = passwordInput.val();
+                    voteChange(pass, lowerSpan, '.*[a-z].*');
+                    voteChange(pass, upperSpan, '.*[A-Z].*');
+                    voteChange(pass, digitalSpan, '.*[0-9].*');
+                    lengthSpan.html(pass.length);
+                };
+
+                checkPassword();
+
+                passwordInput.keyup(checkPassword);
+            };
+
+            this.getPassword = function () {
+                return passwordInput.val();
             }
+
+
         }
 
 

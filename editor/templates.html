@@ -7,7 +7,7 @@
             <div class="password-include">
                 <table class="center-exp">
                     <tr>
-                        <td>[a-z]: </td>
+                        <td>[a-z]:</td>
                         <td><span class="lower-include"></span></td>
                         <td>[A-Z]:</td>
                         <td><span class="upper-include"></span></td>
@@ -25,18 +25,25 @@
 
 <script type="text/template" id="template_tryit">
     <div class="tryit-content center-exp">
-        <div class="tool">
-            <form class="password">
-                <table class="center-exp">
-                    <tr>
-                        <td><label class="password_label">Password:</label></td>
-                        <td><input type="text" size="15" class="password_input uneditable-input"/></td>
-                        <td><button type="submit" class="bn_check btn">Check</button></td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-        <div style="clear: both"></div>
-        <div class="checkio_result"></div>
+        <table class="tool">
+            <tr>
+                <td>
+                    <label class="password_label">Password:</label>
+                    <input type="text" size="15" class="password_input"/>
+                    <button type="button" class="bn-check btn">Check</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="tryit-feedback">
+                    length:&nbsp;<span class="length"></span>&nbsp;
+                    [a-z]:&nbsp;<span class="lower-include vote"></span>&nbsp;
+                    [A-Z]:&nbsp;<span class="upper-include vote"></span>&nbsp;
+                    [0-9]:&nbsp;<span class="digital-include vote"></span>&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td class="checkio_result"></td>
+            </tr>
+        </table>
     </div>
 </script>

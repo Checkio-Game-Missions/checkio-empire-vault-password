@@ -73,63 +73,9 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 $content.find('.call').html('Pass: checkio(' + ext.JSON.encode(checkioInput) + ')');
                 $content.find('.answer').remove();
             }
-            //Dont change the code before it
 
-            var flag_l = false;
-            var flag_u = false;
-            var flag_d = false;
-            var password_word_html = function(){
-                var res = '';
-                for (var i = 0; i < checkioInput.length; i++){
-                    if (checkioInput[i].match('[a-z]')){
-                        res += "<span class='lowercase'>";
-                        flag_l = true;
-                    }
-                    else if (checkioInput[i].match('[A-Z]')){
-                        res += "<span class='uppercase'>";
-                        flag_u = true;
-                    }
-                    else if (checkioInput[i].match('[0-9]')){
-                        res += "<span class='digital'>";
-                        flag_d = true;
-                    }
-                    else
-                        res += "<span>" + checkioInput[i] + "</span> ";
-                    res +=  checkioInput[i] + "</span> ";
-                }
-                if (i < 9)
-                    for (i; i < 9; i++)
-                        res += "<span>&nbsp;</span> ";
-                return res;
-            }();
-            var password_length_html = function(){
-                var res = 'length ';
-                if (checkioInput.length < 10)
-                    res += "< 10";
-                else
-                    res += " >= 10"
-                return res;
-
-            }();
-
-            var password_include = function() {
-                if (flag_l)
-                    $content.find('.lower-include').addClass('vote_up');
-                else
-                    $content.find('.lower-include').addClass('vote_down');
-                if (flag_u)
-                    $content.find('.upper-include').addClass('vote_up');
-                else
-                    $content.find('.upper-include').addClass('vote_down');
-                if (flag_d)
-                    $content.find('.digital-include').addClass('vote_up');
-                else
-                    $content.find('.digital-include').addClass('vote_down');
-            }();
-
-            $content.find('.password-length').html(password_length_html);
-            $content.find('.password-word').html(password_word_html);
-
+            var explanationDiv = new HousePasswordDiv($content.find(".explanation"));
+            explanationDiv.createDiv(checkioInput);
 
             this_e.setAnimationHeight($content.height() + 60);
 
@@ -160,7 +106,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             $tryit.find('.password_input').focus();
 
 
-            $tryit.find('form').submit(function(e){
+            $tryit.find('form').submit(function (e) {
                 var password = $tryit.find('.password_input').val();
                 this_e.sendToConsoleCheckiO(password);
                 e.stopPropagation();
@@ -168,28 +114,61 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             });
 
         });
-       
 
-        var colorOrange4 = "#F0801A";
-        var colorOrange3 = "#FA8F00";
-        var colorOrange2 = "#FAA600";
-        var colorOrange1 = "#FABA00";
+        function HousePasswordDiv(root) {
 
-        var colorBlue4 = "#294270";
-        var colorBlue3 = "#006CA9";
-        var colorBlue2 = "#65A1CF";
-        var colorBlue1 = "#8FC7ED";
+            var vMark = "&#10004;";
+            var xMark = "&#10008;";
 
-        var colorGrey4 = "#737370";
-        var colorGrey3 = "#D9E9E";
-        var colorGrey2 = "#C5C6C6";
-        var colorGrey1 = "#EBEDED";
+            this.createDiv = function (text) {
+                var flag_l = false;
+                var flag_u = false;
+                var flag_d = false;
+                var password_word_html = '';
+                for (var i = 0; i < text.length; i++) {
+                    if (text[i].match('[a-z]')) {
+                        password_word_html += "<span class='lowercase'>";
+                        flag_l = true;
+                    }
+                    else if (text[i].match('[A-Z]')) {
+                        password_word_html += "<span class='uppercase'>";
+                        flag_u = true;
+                    }
+                    else if (text[i].match('[0-9]')) {
+                        password_word_html += "<span class='digital'>";
+                        flag_d = true;
+                    }
+                    else
+                        password_word_html += "<span>" + text[i] + "</span> ";
+                    password_word_html += text[i] + "</span> ";
+                }
+                if (i < 9)
+                    for (i; i < 9; i++)
+                        password_word_html += "<span>&nbsp;</span> ";
 
-        var colorWhite = "#FFFFFF";
-        //Your Additional functions or objects inside scope
-        //
-        //
-        //
+                var password_length_html = 'length ';
+                if (text.length < 10)
+                    password_length_html += "&lt; 10";
+                else
+                    password_length_html += " &ge; 10";
+
+                if (flag_l)
+                    root.find('.lower-include').html(vMark).addClass('vote_up');
+                else
+                    root.find('.lower-include').html(xMark).addClass('vote_down');
+                if (flag_u)
+                    root.find('.upper-include').html(vMark).addClass('vote_up');
+                else
+                    root.find('.upper-include').html(xMark).addClass('vote_down');
+                if (flag_d)
+                    root.find('.digital-include').html(vMark).addClass('vote_up');
+                else
+                    root.find('.digital-include').html(xMark).addClass('vote_down');
+
+                root.find('.password-length').html(password_length_html);
+                root.find('.password-word').html(password_word_html);
+            }
+        }
 
 
     }

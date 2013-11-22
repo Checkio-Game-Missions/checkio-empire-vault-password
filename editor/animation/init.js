@@ -96,12 +96,14 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
         ext.set_generate_animation_panel(function (this_e) {
             $tryit = $(this_e.setHtmlTryIt(ext.get_template('tryit'))).find(".tryit-content");
-            var tDiv = new HousePasswordDiv($tryit.find(".tool"));
-            tDiv.createFeedback();
+            var passwordInput = $tryit.find('.password_input');
+            passwordInput.focus();
+//            var tDiv = new HousePasswordDiv($tryit.find(".tool"));
+//            tDiv.createFeedback();
 
 
             $tryit.find('.bn-check').click(function (e) {
-                var password = tDiv.getPassword();
+                var password = passwordInput.val();
                 this_e.sendToConsoleCheckiO(password);
                 e.stopPropagation();
                 return false;

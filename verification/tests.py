@@ -87,6 +87,16 @@ TESTS = {
         {
             "input": "K5uzwrFESgmat6X2VYw",
             "answer": True
-        }
+        },
+        {
+            "input": "AAABasdasdsdafaww",
+            "answer": False
+        },
+        {
+            "input": "123231JHHJ79879879",
+            "answer": False
+        },
+
+
     ]
 }

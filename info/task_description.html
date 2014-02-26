@@ -45,11 +45,10 @@
 <br/>
 <br/>
 <p>Help Nikola develop a password security check module for Sofia. The password will be considered strong enough if its
-    length is greater than or equal to 10 symbols, it has at least one number, as well as containing one uppercase
-    letter and one lowercase
-    letter in it.</p>
+    length is greater than or equal to 10 symbols, it has at least one digit, as well as containing one uppercase
+    letter and one lowercase letter in it.</p>
 
-<p><strong>Precondition</strong>: The password contains only ASCII symbols.
+
 
 </p>
 <p><strong>Input data: </strong>A string that is a password (Unicode for python 2.7).</p>
@@ -67,4 +66,9 @@ checkio('QwErTy911poqqqq')==True</pre>
 <p class="for_info_only">
     <strong>How it is used: </strong>
     If you are worried about security of your app or service, then you can check your users' passwords for complexity.
+
 </p>
+
+<p><strong>Precondition</strong>:<br>
+    The password contains only ASCII letters or digits.<br>
+    0 < |password| &le; 64

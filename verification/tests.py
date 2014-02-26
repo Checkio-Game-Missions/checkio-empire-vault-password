@@ -127,7 +127,7 @@ TESTS = {
         },
         {
             "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaSSSSSSSSSSSSSSSSSSSSSSSSS111111111111",
-            "answer": False
+            "answer": True
         },
 
         {

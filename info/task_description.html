@@ -42,8 +42,6 @@
 
     <p>"Fine, bring in your password gizmo then!"</p>
 </div>
-<br/>
-<br/>
 <p>Help Nikola develop a password security check module for Sofia. The password will be considered strong enough if its
     length is greater than or equal to 10 symbols, it has at least one digit, as well as containing one uppercase
     letter and one lowercase letter in it.</p>
@@ -56,17 +54,17 @@
     converted and processed as a boolean. In the results you will see the converted results.</p>
 <p><strong>Example:</strong></p>
 
-<pre class="brush: python">checkio('A1213pokl')==False
-checkio('bAse730onE')==True
-checkio('asasasasasasasaas')==False
-checkio('QWERTYqwerty')==False
-checkio('123456123456')==False
-checkio('QwErTy911poqqqq')==True</pre>
+<pre class="brush: python">checkio('A1213pokl') == False
+checkio('bAse730onE') == True
+checkio('asasasasasasasaas') == False
+checkio('QWERTYqwerty') == False
+checkio('123456123456') == False
+checkio('QwErTy911poqqqq') == True</pre>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
     If you are worried about security of your app or service, then you can check your users' passwords for complexity.
-
+    You can complex this task and require from your users more conditions (punctuations or unicode).
 </p>
 
 <p><strong>Precondition</strong>:<br>

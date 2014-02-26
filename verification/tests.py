@@ -59,43 +59,102 @@ TESTS = {
         },
     ],
     "Extra": [
+
         {
-            "input": "vcugdgywnl",
-            "answer": False
-        },
-        {
-            "input": "ZFLTIYYNII",
-            "answer": False
-        },
-        {
-            "input": "9995232403",
-            "answer": False
-        },
-        {
-            "input": "p7ymoqxr8",
-            "answer": False
-        },
-        {
-            "input": "qB8TDwXpDp",
-            "answer": True
-        },
-        {
-            "input": "123asasasasa",
+            "input": "1",
             "answer": False
         },
 
         {
-            "input": "K5uzwrFESgmat6X2VYw",
+            "input": "vcugdgywnlj",
+            "answer": False
+        },
+        {
+            "input": "abcdef",
+            "answer": False
+        },
+        {
+            "input": "ABCDEF",
+            "answer": False
+        },
+        {
+            "input": "HJKKJDSHJKHDKWJWDW",
+            "answer": False
+        },
+        {
+            "input": "123456",
+            "answer": False
+        },
+        {
+            "input": "123456789012",
+            "answer": False
+        },
+        {
+            "input": "fsDSkjSD",
+            "answer": False
+        },
+        {
+            "input": "fsDSkjSDDSJhjhjd",
+            "answer": False
+        },
+        {
+            "input": "gfh123",
+            "answer": False
+        },
+        {
+            "input": "erer798rew9rew9r7ew987rw",
+            "answer": False
+        },
+        {
+            "input": "DHJK8768D",
+            "answer": False
+        },
+        {
+            "input": "DHJK87DSKJHWW68D",
+            "answer": False
+        },
+        {
+            "input": "Fa11con77",
+            "answer": False
+        },
+        {
+            "input": "Fa11con77YES",
             "answer": True
         },
         {
-            "input": "AAABasdasdsdafaww",
-            "answer": False
+            "input": "Fa11con777",
+            "answer": True
         },
         {
-            "input": "123231JHHJ79879879",
+            "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaSSSSSSSSSSSSSSSSSSSSSSSSS111111111111",
             "answer": False
         },
+
+        {
+            "input": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+            "answer": True
+        },
+        {
+            "input": "9876543210ZYXWVUTSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba",
+            "answer": True
+        },
+        {
+            "input": "IAKxnvZokrsWP1S0NCfJq4pti9Q6c8gXmB2alzuwUVRbD73OGE5HjMTFYLyhed",
+            "answer": True
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     ]

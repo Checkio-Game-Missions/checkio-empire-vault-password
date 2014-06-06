@@ -1,0 +1,37 @@
+<img class="for_info_only" title="ruler" src="{{MEDIA}}house_password_v1_400.png" alt="ruler"
+     style="width: 200px;float: right"/>
+
+<p>
+    Stefan e Sofia não se lembram da segurança e utilizam senhas simples para tudo. 
+    Ajude Nicolas desenvolver um modulo de verificação de segurança de senhas.
+    A senha é considerada forte o suficiente se o seu comprimento for superior ou igual a 10 caracteres,
+    contenha pelo menos um caractere numérico, uma letra maiúscula e uma letra minúscula.
+    A senha contém apenas caracteres latinos ASCII ou dígitos.
+</p>
+
+<p>
+    <strong>Entrada: </strong>Uma senha no formato de string (Unicode para python 2.7). 
+</p>
+<p>
+    <strong>Saída: </strong>Segurança da senha na forma de um valor boleano (bool) ou qualquer tipo de dados que pode ser convertido e processado como um boleano. Nos resultados, você verá os resultados convertidos para verdadeiro ou falso (True ou False)
+</p>
+<p>
+    <strong>Exemplo:</strong>
+</p>
+
+<pre class="brush: python">checkio('A1213pokl') == False
+checkio('bAse730onE') == True
+checkio('asasasasasasasaas') == False
+checkio('QWERTYqwerty') == False
+checkio('123456123456') == False
+checkio('QwErTy911poqqqq') == True</pre>
+
+<p class="for_info_only">
+    <strong>Como é utilizado: </strong>
+    Se você está preocupado com a segurança do seu aplicativo ou serviço, você pode verificar a complexidade das senhas de seus usuários.
+    Você pode usar essas habilidades para exigir que seus usuários possuam senhas que satisfaçam os requisitos de senha (pontuações ou Unicode).
+</p>
+
+<p><strong>Condições prévias</strong>:<br>
+    re.match("[a-zA-Z0-9]+", password)<br>
+    0 &lt; len(password) &le; 64

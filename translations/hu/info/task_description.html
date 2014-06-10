@@ -1,0 +1,40 @@
+<img class="for_info_only" title="ruler" src="{{MEDIA}}house_password_v1_400.png" alt="ruler"
+     style="width: 200px;float: right"/>
+
+<p>
+    István és Zsófi meg szoktak feledkezni a biztonságról és egyszerű jelszavakat használnak mindenhová. 
+    Segítsen Nikolettának kidolgozni egy modult a jelszavak biztonságosságának ellenőrzéséhez! A jelszó 
+    akkor megfelelő bonyolultságú, ha legalább 10 vagy annál több karakterből áll, minimum egy számjegyet 
+    tartalmaz, továbbá legalább egy kis- és egy nagybetűt is. A jelszó csak latin betűket és/vagy 
+    számjegyeket tartalmazhat.
+</p>
+
+<p>
+    <strong>Bemeneti adatok: </strong> egy szövegként (str, unicode) megadott jelszó.
+</p>
+<p>
+    <strong>Kimeneti adatok: </strong> a jelszó biztonsága logikai (bool, vagyis igaz/hamis) értékként 
+    vagy egyéb más logikaivá (True vagy False) konvertálható és ábrázolható értékként.
+</p>
+<p>
+    <strong>Példák:</strong>
+</p>
+
+<pre class="brush: python">checkio('A1213pokl') == False
+checkio('bAse730onE') == True
+checkio('asasasasasasasaas') == False
+checkio('QWERTYqwerty') == False
+checkio('123456123456') == False
+checkio('QwErTy911poqqqq') == True</pre>
+
+<p class="for_info_only">
+    <strong>Alkalmazása: </strong>
+    ha aggódik az alkalmazása vagy szolgáltatása biztonságáért, akkor elvégezheti az ön felhasználói által 
+    használt jelszavak összetettségi vizsgálatát. Ugyanakkor továbbfejlesztve ez irányú képességét még szigorúbb 
+    követelményeket is támaszthat a jelszavakkal szemben (mondjuk, használhat írásjeleket vagy más 
+    unicode karaktereket).
+</p>
+
+<p><strong>Előfeltételek</strong>:<br>
+    re.match("[a-zA-Z0-9]+", password)<br>
+    0 &lt; len(password) &le; 64

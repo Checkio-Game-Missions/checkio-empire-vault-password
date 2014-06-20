@@ -1,0 +1,32 @@
+<img class="for_info_only" title="ruler" src="{{MEDIA}}house_password_v1_400.png" alt="ruler"
+     style="width: 200px;float: right"/>
+
+<p>
+	StephanとSophiaはセキュリティを忘れて何にでも単純なパスワードを使います。
+	パスワードのセキュリティ検査モジュールを開発してNikolaを助けます。
+	十分強いと考えられるパスワードは長さが10文字以上です。
+	少なくとも一つ以上の数字、一つ以上の大文字、一つの以上の小文字を含みます。
+	パスワードはASCIIの英文字または数字のみを含んでいます。
+</p>
+
+<p><strong>入力: </strong>パスワード、文字列 (Unicode for Python 2.7)</p>
+<p><strong>出力: </strong>パスワードが安全かどうか、ブール値もしくはブール値に変換できるかブール値として処理できる任意のデータ型。
+結果として変換された結果を見るでしょう。</p>
+<p><strong>例:</strong></p>
+
+<pre class="brush: python">checkio('A1213pokl') == False
+checkio('bAse730onE') == True
+checkio('asasasasasasasaas') == False
+checkio('QWERTYqwerty') == False
+checkio('123456123456') == False
+checkio('QwErTy911poqqqq') == True</pre>
+
+<p class="for_info_only">
+    <strong>どのように使われるか: </strong>
+	あなたのアプリケーションやサービスのセキュリティを気にするなら、あなたのユーザーのパスワードの複雑さを検査できます。
+	あなたは、あなたのユーザのパスワードがより多くの条件(記号やunicode)に合致するようにこれらのスキルを使うことがでます。
+</p>
+
+<p><strong>事前条件</strong>:<br>
+    re.match("[a-zA-Z0-9]+", password)<br>
+    0 &lt; len(password) &le; 64

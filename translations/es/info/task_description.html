@@ -1,0 +1,32 @@
+<img class="for_info_only" title="ruler" src="{{MEDIA}}house_password_v1_400.png" alt="ruler"
+     style="width: 200px;float: right"/>
+
+<p>
+    Stephan y Sophia no se preocupan por la seguridad y usan contraseñas sencillas para todo.
+    Ayuda a a Nikola a desarrollar un módulo para verificar la seguridad de la contraseña o password.
+    La contraseña será considerada suficientemente fuerte si el largo es mayor o igual a 10 caracteres,
+    tiene por lo menos un dígito, así como una letra en mayúscula y una letra en minúscula.
+    La contraseña contiene solo letras latinas o dígitos ASCII.
+</p>
+
+<p><strong>Entrada: </strong>La contraseña como una cadena o string (Unicode para python 2.7).</p>
+<p><strong>Salida: </strong> Si la contraseña es segura o no representada mediante un booleano o cualquier otro tipo de dato que
+    pueda ser convertido y procesado como un booleano. En los resultados finales podrás ver los resultados convertidos.</p>
+<p><strong>Ejemplo:</strong></p>
+
+<pre class="brush: python">checkio('A1213pokl') == False
+checkio('bAse730onE') == True
+checkio('asasasasasasasaas') == False
+checkio('QWERTYqwerty') == False
+checkio('123456123456') == False
+checkio('QwErTy911poqqqq') == True</pre>
+
+<p class="for_info_only">
+    <strong>¿Cómo es usado?: </strong>
+    Si te preocupa la seguridad de tu aplicación o servicio, puedes verificar la complejidad de las contraseñas de tus usuarios.
+    Puedes usar estas habilidades para requerir a tus usuarios contraseñas que cumplan con más condiciones (puntuaciones o unicode).
+</p>
+
+<p><strong>Pre-condición</strong>:<br>
+    re.match("[a-zA-Z0-9]+", password)<br>
+    0 &lt; len(password) &le; 64

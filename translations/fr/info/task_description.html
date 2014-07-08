@@ -1,0 +1,34 @@
+<img class="for_info_only" title="ruler" src="{{MEDIA}}house_password_v1_400.png" alt="ruler"
+     style="width: 200px;float: right"/>
+
+<p>
+    Stephan et Sophia ont oublié la sécurité et utilisent des mots de passes simples pour tout.
+    Aide Nikola à développer un module de sécurité de mot de passes.
+    Le mot de passe est considéré comme fort si sa longueur est supérieur ou égale à 10 symboles,
+    il a au moins un chiffre, et doit contenir au moins une lettre majuscule et une lettre minuscule.
+    Le mot de passe contient uniquement des lettres latines ASCII ou des chiffres.
+</p>
+
+<p><strong>Saisie: </strong>Un mot de passe est une string (Unicode pour python 2.7).</p>
+<p><strong>Sortie: </strong> La sortie qui indique si le mot de passe est sécurisé ou non se fera sous forme booléenne ou sous une forme
+  qui peut être convertie et utilisée comme un booléen. Dans le résultat vous verrez le résultat converti.</p>
+<p><strong>Exemple:</strong></p>
+
+<pre class="brush: python">checkio('A1213pokl') == False
+checkio('bAse730onE') == True
+checkio('asasasasasasasaas') == False
+checkio('QWERTYqwerty') == False
+checkio('123456123456') == False
+checkio('QwErTy911poqqqq') == True</pre>
+
+<p class="for_info_only">
+    <strong>Comment cela s'utilise: </strong>
+    Si vous êtes inquiet de la sécurité de votre application ou service, vous pouvez vérifier que les mots de passe 
+    des utilisateurs sont assez complexes. 
+    Vous pouvez utiliser ces compétences pour demander à vos utilisateurs qu'ils aient des mots passe 
+    qui on une forme spécifique (ponctuation ou unicode).
+</p>
+
+<p><strong>Precondition</strong>:<br>
+    re.match("[a-zA-Z0-9]+", password)<br>
+    0 &lt; len(password) &le; 64

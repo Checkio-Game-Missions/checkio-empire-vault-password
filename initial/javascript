@@ -1,0 +1,13 @@
+function is_safe(data) {
+    return true || false;
+}
+
+
+//if __name__ == '__main__':
+//    # These "asserts" using only for self-checking and not necessary for auto-testing
+//    assert is_safe('A1213pokl') == False, "1st example"
+//    assert is_safe('bAse730onE4') == True, "2nd example"
+//    assert is_safe('asasasasasasasaas') == False, "3rd example"
+//    assert is_safe('QWERTYqwerty') == False, "4th example"
+//    assert is_safe('123456123456') == False, "5th example"
+//    assert is_safe('QwErTy911poqqqq') == True, "6th example"

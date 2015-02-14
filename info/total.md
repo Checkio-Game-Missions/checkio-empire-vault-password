@@ -1,16 +1,15 @@
-First we need a password for our new vault.
-But it should be safe.
+We've installed a new vault to contain our valuable resources and treasures, but before we can put anything into it, we need a suitable password for our new vault. One that should be as safe as possible.
 
-The password will be considered strong enough if its length is greater than or equal to 10 symbols,
-it has at least one digit, as well as containing one uppercase letter and one lowercase letter in it.
-The password contains only ASCII latin letters or digits.
+The password will be considered strong enough if its length is greater than or equal to 10 characters,
+it contains at least one digit, as well as at least one uppercase letter and one lowercase letter.
+The password may only contain ASCII latin letters or digits, no symbols.
 
-You are given a password. Check is it corresponds to the rules?
+You are given a password. We need your code to verify if it meets the conditions for a secure password.
 
 **Input:** A password as a string. 
 
-**Output:** Is the password safe or not as a boolean or any data type that can be
-converted and processed as a boolean. In the results you will see the converted results.
+**Output:** A determination if the password safe or not as a boolean, or any data type that can be
+converted and processed as a boolean. When the results process, you will see the converted results.
 
 **Example:**
 
@@ -25,8 +24,8 @@ is_safe('QwErTy911poqqqq') == True
 
 **How it is used:**
 
-If you are worried about the security of your app or service, you can check your users' passwords for complexity.
-You can use these skills to require that your users passwords meet more conditions (punctuations or unicode).
+If you are worried about the security of your app or service, you can use this handy code to personally check your users' passwords for complexity.
+You can further use these skills to require that your users passwords meet or include even more conditions, punctuation or unicode.
 
 **Precondition:**
 ```python

@@ -1,5 +1,5 @@
 from checkio_referee import RefereeCodeGolf
-from checkio_referee.covercode import py_2_str
+from checkio_referee import covercodes
 
 import settings
 import settings_env
@@ -14,7 +14,7 @@ class Referee(RefereeCodeGolf):
     CURRENT_ENV = settings_env.CURRENT_ENV
     FUNCTION_NAME = "golf"
     ENV_COVERCODE = {
-        "python_2": py_2_str,
+        "python_2": covercodes.py_2_str,
         "python_3": None,
         "javascript": None
     }

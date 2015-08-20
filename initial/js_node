@@ -11,4 +11,5 @@ function golf(password) {
 //    assert.equal(golf('bAse730onE'), true, "Nice";
 //    assert.equal(golf('asasasasasasasaas'), false, "Only lowers");
 //    assert.equal(golf('QWERTYqwerty'), false, "Numbers?");
+//    console.log("All done? Earn rewards by using the 'Check' button!");
 //}

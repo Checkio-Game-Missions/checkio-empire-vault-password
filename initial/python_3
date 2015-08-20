@@ -9,3 +9,4 @@ def golf(password):
 #     golf('QWERTYqwerty') == False
 #     golf('123456123456') == False
 #     golf('QwErTy911poqqqq') == True
+#     print("Use 'Check' to earn sweet rewards!")
